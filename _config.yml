@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "da
 
 # Site Settings
 locale                   : "es-CO"
-title                    : "3EG S.A.S."
+title                    : "3 Engineering Group - 3EG S.A.S."
 title_separator          : "|"
 subtitle                 : "Servicios de Ingeniería"
 name                     : "3 Engineering Group - 3EG S.A.S."
@@ -25,7 +25,7 @@ url                      : # the base hostname & protocol for your site e.g. "ht
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/logo final 3eg-01 solo.png"
+logo                     : "/assets/images/logo final 3eg-01.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "3EG S.A.S"
-  avatar           : "/assets/images/logo final 3eg-01.png"
+  avatar           : "/assets/images/P1070087-2-scaled.png"
   bio              : "Servicios de **Ingeniería Digital** e **Integridad Mecánica**."
   location         : "Bogotá - Colombia"
   email            : "contacto@3eg.co"
