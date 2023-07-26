@@ -117,7 +117,7 @@ author:
       icon: "fab fa-linkedin-square"
       url: "https://www.linkedin.com/company/3-engineering-group-s-a-s-"
     - label: "Whatsapp"
-      icon: "fa fa-whatsapp" aria-hidden="true""
+      icon: "fa fa-whatsapp aria-hidden="true""
       url: "https://wa.me/+573057002124"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
