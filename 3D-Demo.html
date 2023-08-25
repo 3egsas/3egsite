@@ -1,0 +1,43 @@
+---
+layout: single
+author_profile: true
+toc: true
+---
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<header>
+    <h1 id="page-title" class="page__title" itemprop="headline">Demo 3D</h1>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <style>
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+} 
+</style>
+</header>
+
+
+<model-viewer src="/assets/images/TEST_DEMO.glb" ios-src="/assets/images/TEST_DEMO.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/images/poster.webp" shadow-intensity="1" camera-orbit="263deg 67.42deg 65.76m" field-of-view="24.43deg" auto-rotate environment-image="/assets/images/aircraft_workshop_01_1k.hdr">
+    <button class="Hotspot" slot="hotspot-1" data-position="-1.3730828001136146m 9.92204525184205m -13.984168032030821m" data-normal="0m 0.5555655151911245m -0.8314727646353911m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Intercambiador</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="21.11732121548262m 6.304265794173865m -14.026058478542685m" data-normal="-0.7489589839749673m 1.4713038783679333e-16m -0.662616359836659m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Torre</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="-3.4490405023617328m 0.5895979586557303m -21.914395354467715m" data-normal="-0.9659254960312096m -0.25882027763848386m -5.746964629482406e-17m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Casa Bombas</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="2.5907053074225717m 3.810969583734984m -11.240154068479704m" data-normal="-0.08322969650846597m -0.11803068696054565m 0.9895158283497694m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Estructura</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="10.703523752817391m 1.4563057453087824m -16.8535385131836m" data-normal="0m 2.2204460492503126e-16m -1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Filtro</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <!--<button slot="ar-button" id="ar-button">
+        Vealo en su espacio!
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>-->
+</model-viewer>
+
