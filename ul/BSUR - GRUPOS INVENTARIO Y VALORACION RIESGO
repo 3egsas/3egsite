@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Bullerengue Sur - GRUPOS INVENTARIO Y VALORACION RIESGO - 3EG</title>
+    <meta name="description" content="Servicios de Digitalización 3EG S.A.S., una herramienta de información para facilitar la toma de desiciones y apoyar el trabajo seguro y eficiente, ya sea en sitio o remoto.">
+    <meta property="og:title" content="Gemelo Digital R.B.I. - LEC - Bullerengue Sur" />
+    <meta property="og:url" content="https://3eg.co/ul/lec/RBI/3D-BS-RSK.html" />
+    <meta property="og:description" content="Servicios de Digitalización 3EG S.A.S.">
+    <meta property="og:image" content="https://3eg.co/files/PEQ_logo_2.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_En" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <style type="text/css"> 
+        html { 
+            overflow: auto; 
+        } 
+          
+        html, 
+        body, 
+        div, 
+        iframe { 
+            margin: 0px; 
+            padding: 0px; 
+            height: 100%; 
+            border: none; 
+        } 
+          
+        iframe { 
+            display: block; 
+            width: 100%; 
+            border: none; 
+            overflow-y: auto; 
+            overflow-x: hidden; 
+        } 
+    </style> 
+</head> 
+<body>
+
+<iframe src="https://unal2987.autodesk360.com/shares/public/SHd38bfQT1fb47330c995b3777e2406a2390?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
+</body>
+</html> 
