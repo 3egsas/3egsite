@@ -1,0 +1,84 @@
+/* Reset default margins and hide overflow */
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* 3D Viewer */
+#viewer {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Toolbar Styling */
+#toolbar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#toolbar button {
+  background: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+#toolbar button:hover {
+  background: #f0f0f0;
+}
+
+/* Instructions Overlay Styling */
+#instructions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 250px;
+  font-size: 14px;
+}
+
+#instructions h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+#instructions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#instructions li {
+  margin-bottom: 8px;
+}
+
+/* Logo Styling */
+#logo {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#logo img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  object-fit: contain;
+}
