@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BIM Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+  <!-- OrbitControls -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/examples/js/controls/OrbitControls.min.js"></script>
+  <!-- GLTFLoader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/examples/js/loaders/GLTFLoader.min.js"></script>
+</head>
+<body>
+  <!-- Toolbar -->
+  <div id="toolbar">
+    <button id="zoomInBtn" title="Zoom In"></button>
+    <button id="zoomOutBtn" title="Zoom Out"></button>
+    <button id="rotateLeftBtn" title="Rotate Left"></button>
+    <button id="rotateRightBtn" title="Rotate Right"></button>
+  </div>
+
+  <!-- Instructions Overlay -->
+  <div id="instructions">
+    <h3>How to Use:</h3>
+    <ul>
+      <li><strong>Zoom:</strong> Use mouse scroll or buttons.</li>
+      <li><strong>Rotate:</strong> Click and drag mouse or use rotate buttons.</li>
+      <li><strong>Pan:</strong> Right-click and drag mouse.</li>
+    </ul>
+  </div>
+
+  <!-- Logo Image -->
+  <div id="logo">
+    <img src="assets/images/logo.png" alt="Logo">
+  </div>
+
+  <!-- 3D Viewer Container -->
+  <div id="viewer"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
