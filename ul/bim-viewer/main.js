@@ -1,3 +1,8 @@
+// Import necessary modules from Three.js
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/loaders/GLTFLoader.js';
+
 // Set up scene, camera, and renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -8,7 +13,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('viewer').appendChild(renderer.domElement);
 
 // Add OrbitControls
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
 // Ambient Light
@@ -21,7 +26,7 @@ directionalLight.position.set(10, 10, 10);
 scene.add(directionalLight);
 
 // Load glTF model
-const loader = new THREE.GLTFLoader();
+const loader = new GLTFLoader();
 loader.load(
   'assets/models/your-model.glb', // Update path if necessary
   function (gltf) {
@@ -57,44 +62,26 @@ animate();
 
 // Zoom In
 document.getElementById('zoomInBtn').addEventListener('click', () => {
-  // Option 1: Adjust the camera's field of view
   camera.fov = Math.max(camera.fov - 5, 10); // Prevent fov from being too small
   camera.updateProjectionMatrix();
   controls.update();
-  
-  // Option 2: Move the camera closer
-  // const zoomFactor = 1.2;
-  // camera.position.multiplyScalar(1 / zoomFactor);
-  // controls.update();
 });
 
 // Zoom Out
 document.getElementById('zoomOutBtn').addEventListener('click', () => {
-  // Option 1: Adjust the camera's field of view
   camera.fov = Math.min(camera.fov + 5, 100); // Prevent fov from being too large
   camera.updateProjectionMatrix();
   controls.update();
-  
-  // Option 2: Move the camera farther
-  // const zoomFactor = 1.2;
-  // camera.position.multiplyScalar(zoomFactor);
-  // controls.update();
 });
 
 // Rotate Left
 document.getElementById('rotateLeftBtn').addEventListener('click', () => {
-  // Rotate the model or camera
   scene.rotation.y += THREE.MathUtils.degToRad(10); // Rotate scene
-  // Alternatively, rotate the camera around the target
-  // controls.rotateLeft(Math.PI / 18); // 10 degrees
   controls.update();
 });
 
 // Rotate Right
 document.getElementById('rotateRightBtn').addEventListener('click', () => {
-  // Rotate the model or camera
   scene.rotation.y -= THREE.MathUtils.degToRad(10); // Rotate scene
-  // Alternatively, rotate the camera around the target
-  // controls.rotateRight(Math.PI / 18); // 10 degrees
   controls.update();
 });
