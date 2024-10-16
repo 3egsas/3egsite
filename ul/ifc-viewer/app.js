@@ -12,7 +12,7 @@ const loadModel = async (url) => {
 };
 
 // Load your IFC model
-loadModel('path/to/your/model.ifc');
+loadModel('https://3eg.co/ul/ifc-viewer/aisc_sculpture_param.ifc');
 
 // Add controls
 viewer.context.ifcCamera.cameraControls.enableRotate = true;
