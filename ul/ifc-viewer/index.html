@@ -2,42 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIM Viewer</title>
-    <style>
-        body { margin: 0; }
-        #viewer-container { width: 100%; height: 100vh; }
-        #instructions {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        #logo {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            width: 100px;
-            height: auto;
-        }
-    </style>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r151/three.min.js"></script>
+    <!-- OrbitControls -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r151/examples/js/controls/OrbitControls.js"></script>
+    <!-- WebIFC Viewer -->
+    <script src="https://unpkg.com/web-ifc-viewer@2.0.3/dist/web-ifc-viewer.min.js"></script>
 </head>
 <body>
-    <div id="viewer-container"></div>
-    <div id="instructions">
-        <h3>Instructions:</h3>
-        <p>Left-click: Rotate</p>
-        <p>Right-click: Pan</p>
-        <p>Scroll: Zoom</p>
-        <p>M: Measure</p>
-        <p>C: Create section</p>
+    <!-- Logo -->
+    <div id="logo">
+        <img src="assets/logo.png" alt="Logo">
     </div>
-    <img id="logo" src="logo.png" alt="Logo">
-    <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/web-ifc-viewer@1.0.218/dist/index.min.js"></script>
-    <script src="app.js"></script>
+
+    <!-- Text Overlay Instructions -->
+    <div id="overlay">
+        <h2>Instructions</h2>
+        <ul>
+            <li><strong>Zoom:</strong> Scroll your mouse wheel.</li>
+            <li><strong>Rotate:</strong> Click and drag the mouse.</li>
+            <li><strong>Measure:</strong> Click the measure button and select two points.</li>
+            <li><strong>Slice Plane:</strong> Click the slice button and define the plane.</li>
+            <li><strong>Upload IFC:</strong> Click the upload button to load your model.</li>
+        </ul>
+    </div>
+
+    <!-- Control Buttons -->
+    <div id="controls">
+        <button id="measure-btn">Measure</button>
+        <button id="slice-btn">Slice</button>
+        <button id="reset-btn">Reset View</button>
+    </div>
+
+    <!-- File Upload Button -->
+    <input type="file" id="file-input" accept=".ifc">
+
+    <!-- 3D Viewer Container -->
+    <div id="viewer-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>
