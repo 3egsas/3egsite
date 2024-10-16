@@ -1,7 +1,7 @@
 // Import necessary modules from Three.js using ES Module URLs
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from './libs/three.module.js';
+import { OrbitControls } from './libs/OrbitControls.js';
+import { GLTFLoader } from './libs/GLTFLoader.js';
 
 // Set up scene, camera, and renderer
 const scene = new THREE.Scene();
