@@ -7,13 +7,6 @@
 
   <title>BIM Viewer</title>
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Three.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
-  <!-- OrbitControls -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/controls/OrbitControls.js"></script>
-  <!-- GLTFLoader -->
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.min.js"></script>
 </head>
 <body>
   <!-- Toolbar -->
@@ -42,6 +35,7 @@
   <!-- 3D Viewer Container -->
   <div id="viewer"></div>
 
-  <script src="main.js"></script>
+  <!-- Import your main.js as a module -->
+  <script type="module" src="main.js"></script>
 </body>
 </html>
