@@ -1,5 +1,5 @@
 // Import necessary classes from the web-ifc-viewer library
-import { IfcViewerAPI } from 'https://unpkg.com/web-ifc-viewer@2.0.3/dist/web-ifc-viewer.module.js';
+import { IfcViewerAPI } from 'https://unpkg.com/browse/web-ifc-viewer@1.0.218/dist/ifc-viewer-api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize the IFC Viewer
