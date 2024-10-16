@@ -29,7 +29,7 @@ scene.add(directionalLight);
 // Load glTF model
 const loader = new GLTFLoader();
 loader.load(
-  'assets/models/9_6_2024.glb', // Ensure this path is correct
+  'assets/models/your-model.glb', // Ensure this path is correct
   function (gltf) {
     scene.add(gltf.scene);
     
