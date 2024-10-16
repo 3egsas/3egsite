@@ -1,8 +1,3 @@
-// Import necessary modules from Three.js using ES Module URLs
-import * as THREE from 'https://3eg.co/ul/bim-viewer/libs/three.module.js';
-import { OrbitControls } from 'https://3eg.co/ul/bim-viewer/libs/OrbitControls.js';
-import { GLTFLoader } from 'https://3eg.co/ul/bim-viewer/libs/GLTFLoader.js';
-
 // Set up scene, camera, and renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
