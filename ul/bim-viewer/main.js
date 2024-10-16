@@ -1,4 +1,4 @@
-// Import necessary modules from Three.js using correct CDN paths
+// Import necessary modules from Three.js using ES Module URLs
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/loaders/GLTFLoader.js';
@@ -8,6 +8,8 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75, window.innerWidth / window.innerHeight, 0.1, 1000
 );
+
+// Initialize renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('viewer').appendChild(renderer.domElement);
@@ -16,11 +18,10 @@ document.getElementById('viewer').appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-// Ambient Light
+// Add Lights
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
 scene.add(ambientLight);
 
-// Directional Light
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
 directionalLight.position.set(10, 10, 10);
 scene.add(directionalLight);
@@ -28,16 +29,35 @@ scene.add(directionalLight);
 // Load glTF model
 const loader = new GLTFLoader();
 loader.load(
-  'assets/models/your-model.glb', // Update path if necessary
+  'assets/models/9_6_2024.glb', // Ensure this path is correct
   function (gltf) {
     scene.add(gltf.scene);
-    // Optional: Adjust camera position based on model size
-    camera.position.set(5, 5, 5);
+    
+    // Adjust camera to fit the model
+    const box = new THREE.Box3().setFromObject(gltf.scene);
+    const size = box.getSize(new THREE.Vector3()).length();
+    const center = box.getCenter(new THREE.Vector3());
+
+    controls.reset();
+
+    gltf.scene.position.x += (gltf.scene.position.x - center.x);
+    gltf.scene.position.y += (gltf.scene.position.y - center.y);
+    gltf.scene.position.z += (gltf.scene.position.z - center.z);
+    camera.near = size / 100;
+    camera.far = size * 100;
+    camera.updateProjectionMatrix();
+
+    camera.position.copy(center);
+    camera.position.x += size / 2.0;
+    camera.position.y += size / 5.0;
+    camera.position.z += size / 2.0;
+    controls.maxDistance = size * 10;
+    controls.target.copy(center);
     controls.update();
   },
   undefined,
   function (error) {
-    console.error(error);
+    console.error('An error happened while loading the model:', error);
   }
 );
 
