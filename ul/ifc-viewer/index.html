@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIM Viewer</title>
+    <style>
+        body { margin: 0; }
+        #viewer-container { width: 100%; height: 100vh; }
+        #instructions {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #logo {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewer-container"></div>
+    <div id="instructions">
+        <h3>Instructions:</h3>
+        <p>Left-click: Rotate</p>
+        <p>Right-click: Pan</p>
+        <p>Scroll: Zoom</p>
+        <p>M: Measure</p>
+        <p>C: Create section</p>
+    </div>
+    <img id="logo" src="logo.png" alt="Logo">
+    <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+    <script src="https://unpkg.com/web-ifc-viewer@1.0.213/dist/web-ifc-viewer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
