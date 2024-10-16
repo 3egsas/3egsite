@@ -1,7 +1,7 @@
 // Import necessary modules from Three.js using ES Module URLs
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 // Set up scene, camera, and renderer
 const scene = new THREE.Scene();
@@ -29,7 +29,7 @@ scene.add(directionalLight);
 // Load glTF model
 const loader = new GLTFLoader();
 loader.load(
-  'assets/models/your-model.glb', // Ensure this path is correct
+  'assets/models/9_6_2024.glb', // Ensure this path is correct
   function (gltf) {
     scene.add(gltf.scene);
     
